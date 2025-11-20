@@ -142,13 +142,11 @@ def Hyrogloph(frame_den):
   
     # 5) Optional translation of the symbol sequence
     if tr:
-        print("Predicted classes:", predicted_classes)
         translated_text = translate_hieroglyph_symbols(
             predicted_classes,
             src_lang="en",
             tgt_lang="en",
         )
-        print("Translated text:", translated_text)
 
     hyr_running = False
     hyr_done = True
