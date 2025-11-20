@@ -126,7 +126,6 @@ def Hyrogloph(frame_den):
     longest_lines = find_longest_lines(bboxes_hyr, frame_den.shape[1], frame_den.shape[0])
     centered_lines = center_lines(longest_lines)
     arrangement, x_midpoints, y_midpoints = determine_arrangement(centered_lines, bboxes_hyr)
-    print(arrangement)
     hyr_bbs = True
 
     # 4) Symbol classification 
