@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "hieroglyph_demo"
+version = "0.1.0"
+description = "Hieroglyph Recognition Demo for EACL 2026"
+authors = ["Said Yasin <said_yasin1234@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.9"
+
+httpx = ">=0.23.0,<0.24.0"
+opencv-python = "4.10.0.84"
+opencv-contrib-python = "4.10.0.84"
+
+ultralytics = "8.3.35"
+protobuf = "3.20.*"
+
+# --- FIXIERTE, RICHTIGE TORCH VERSIONEN ---
+torch = "2.6.0"
+torchvision = "0.21.0"
+# ----------------------------------------
+
+nltk = "^3.9.1"
+lmdb = "^1.5.1"
+regex = ">=2023.8.8"
+pillow = ">=10.0.0"
+natsort = "^8.4.0"
+six = "^1.16.0"
+requests = "^2.32.3"
+fire = "^0.7.0"
+fvcore = "^0.1.5.post20221221"
+cloudpickle = "^3.1.1"
+omegaconf = "^2.3.0"
+pycocotools = "^2.0.8"
+gdown = "^5.2.0"
+setuptools = "^80.9.0"
+transformers = "4.39.3"
+sentencepiece = "0.1.99"
+accelerate = "^1.11.0"
+
+
+
+[[tool.poetry.source]]
+name = "pytorch-gpu"
+url = "https://download.pytorch.org/whl/cu124"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
