@@ -6,7 +6,7 @@ authors = ["Said Yasin <said_yasin1234@hotmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.11.9"
+python = "3.11.*"
 
 httpx = ">=0.23.0,<0.24.0"
 opencv-python = "4.10.0.84"
