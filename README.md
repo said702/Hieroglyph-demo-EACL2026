@@ -74,7 +74,7 @@ While the prototype is running and the camera window is active, you can control 
 | t          | Enable/Disable Hieroglyph Translation (toggle) |
 | x          | Increase feedback font size |
 | y          | Decrease feedback font size |
-| n          | Reset all hieroglyph-related state variables |
+| n          | Reset the prototype (clear internal state) |
 | h          | Show/Hide Help |
 | q          | Quit the program |
 
