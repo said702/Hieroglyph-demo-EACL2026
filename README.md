@@ -51,6 +51,9 @@ Start the application using:
 - If you only use one external camera (no internal webcam active):
     → Use --camera 0
 
+⚠️ Note: The demo requires direct system-level access to the camera.
+It does not run in isolated environments such as WSL, Docker, or sandboxed VMs, because these environments restrict hardware access.
+
 ------------------------------------------------------------
 
 ## Automatic Downloads (First Run Only)
