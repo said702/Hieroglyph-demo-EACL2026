@@ -11,7 +11,7 @@ from ultralytics import YOLO
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import ctypes 
 import argparse
-
+import platform
 
 
 # -------------------------------------------------------------------------
@@ -175,11 +175,18 @@ def reset_hieroglyph_state():
 
 
 # -------------------------------------------------------------------------
-# Screen resolution
+# Screen resolution (cross-platform)
 # -------------------------------------------------------------------------
-user32 = ctypes.windll.user32
-screen_width = user32.GetSystemMetrics(0)   # 0 = SM_CXSCREEN
-screen_height = user32.GetSystemMetrics(1)  # 1 = SM_CYSCREEN
+if platform.system() == "Windows":
+    # Windows provides the Win32 API via ctypes.windll
+    user32 = ctypes.windll.user32
+    screen_width = user32.GetSystemMetrics(0)
+    screen_height = user32.GetSystemMetrics(1)
+else:
+    # ctypes.windll is not available on Linux/WSL
+    # Use default values or obtain the size from OpenCV instead
+    screen_width = 1920
+    screen_height = 1080
 
 # -------------------------------------------------------------------------
 # Video capture initialisation
