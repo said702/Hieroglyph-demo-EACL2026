@@ -6,7 +6,7 @@ It provides a real-time system for **hieroglyph classification and translation**
 ## Requirements
 
 - Python 3.11.* (recommended: 3.11.9)
-- Camera device
+- Camera device with system-level access
 - Internet connection on first run only (~2 GB model download)
 
 ---
