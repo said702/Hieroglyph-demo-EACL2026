@@ -34,6 +34,7 @@ Once the virtual environment is activated, install the package via pip:
 ```
 pip install git+https://github.com/said702/Hieroglyph-demo-EACL2026
 ```
+ℹ️ **Note:** This command installs the demo package and all required dependencies inside the virtual environment you activated in step 1.
 
 ---
 
