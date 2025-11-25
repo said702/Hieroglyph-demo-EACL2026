@@ -37,6 +37,7 @@ setuptools = "^80.9.0"
 transformers = "4.39.3"
 sentencepiece = "0.1.99"
 accelerate = "^1.11.0"
+screeninfo = "^0.8.1"
 
 
 

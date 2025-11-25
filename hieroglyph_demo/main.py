@@ -12,6 +12,8 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import ctypes 
 import argparse
 import platform
+from screeninfo import get_monitors
+
 
 
 # -------------------------------------------------------------------------
@@ -177,16 +179,10 @@ def reset_hieroglyph_state():
 # -------------------------------------------------------------------------
 # Screen resolution (cross-platform)
 # -------------------------------------------------------------------------
-if platform.system() == "Windows":
-    # Windows provides the Win32 API via ctypes.windll
-    user32 = ctypes.windll.user32
-    screen_width = user32.GetSystemMetrics(0)
-    screen_height = user32.GetSystemMetrics(1)
-else:
-    # ctypes.windll is not available on Linux/WSL
-    # Use default values or obtain the size from OpenCV instead
-    screen_width = 1920
-    screen_height = 1080
+m = get_monitors()[0]
+screen_width  = m.width
+screen_height = m.height
+
 
 # -------------------------------------------------------------------------
 # Video capture initialisation
